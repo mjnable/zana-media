@@ -38,7 +38,7 @@ final class MediaServiceProvider extends ServiceProvider
                     $formats,
                     $config->int('media.quality', 75),
                 );
-            })
+            })->uses(ConfigurationInterface::class, StorageManager::class)
             ->singleton(Picture::class);
     }
 
